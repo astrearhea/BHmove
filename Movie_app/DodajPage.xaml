@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Gledaj poslije" Icon="ic_action_add_box.png"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="background.jfif"
+             x:Class="Movie_app.DodajPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="Center" Padding="5" Margin="20">
+                <Label Text="Odaberite film koji želite gledati kasnije" TextColor="DarkSalmon" HorizontalTextAlignment="Center"></Label>
+                <Picker x:Name="picker" Title="Odaberite Žanr" TitleColor="Black" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Dugometražni igrani film</x:String>
+                            <x:String>Dugometražni dokumentarni film</x:String>
+                            <x:String>Animirani dugometražni film</x:String>
+                            <x:String>Kratki igrani film</x:String>
+                            <x:String>Kratki dokumentarni film</x:String>
+                            <x:String>Animirani kratki film</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" x:Name="zanr"/>
+                <Entry x:Name="naziv" Placeholder="Upišite naziv filma" PlaceholderColor="Black"></Entry>
+                <Entry x:Name="glavniGlumac" Placeholder="Upišite ime glavnog glumca" PlaceholderColor="Black"></Entry>
+                <Entry x:Name="godinaIzdavanja" Placeholder="Upišite godinu izdavanja filma" PlaceholderColor="Black" Keyboard="Numeric"></Entry>
+                <Entry x:Name="producent" Placeholder="Upišite producenta" PlaceholderColor="Black"></Entry>
+                <Button CornerRadius="30" x:Name="dodajNaListu" Text="Dodaj na listu gledanja" Clicked="dodajNaListu_Clicked" BackgroundColor="BurlyWood"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

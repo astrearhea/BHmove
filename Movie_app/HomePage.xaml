@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Početna" Icon="ic_action_home.png" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:forms1="http://xamarin.com/schemas/2014/forms/design"
+    BackgroundImage="background.jfif"
+    x:Class="Movie_app.HomePage">
+
+    <ContentPage.Content>
+        <ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout>
+
+                <Label Text="Dobrodošli na BHMove! " Padding="30,0,30,0" Margin="30,0" HorizontalOptions="Center" VerticalOptions="FillAndExpand" FontSize="Title" FontAttributes="Italic" TextColor ="BurlyWood" ></Label>
+                <Label Text="Vaš katalog BIH kinematografije!" Padding="5,0,0,0" Margin="30,0" HorizontalOptions="Center" VerticalOptions="FillAndExpand" FontSize="Body" FontAttributes="Italic" TextColor ="Gray" ></Label>
+                <Label Text="Naše preporuke za gledanje: " Padding="5,0,30,0" Margin="30,0" HorizontalOptions="Center" VerticalOptions="FillAndExpand" FontSize="Body" FontAttributes="Italic" TextColor ="BurlyWood" ></Label>
+
+
+                <forms1:CarouselView x:Name="MainCarouselView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <forms1:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding .}"></Image>
+                        </DataTemplate>
+                    </forms1:CarouselView.ItemTemplate>
+                </forms1:CarouselView>
+
+                <Label Text="Posljednje novosti" HorizontalOptions="Center" VerticalOptions="FillAndExpand" FontSize="Title" FontAttributes="Italic" TextColor ="DarkSalmon"></Label>
+
+                <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="aida" Clicked="aida_Clicked"  Source="http://bhfilm.ba/slike/clanci/1625659426aida_causevic.jpeg"  HorizontalOptions="Start"/>
+                <Label  Text="IN MEMORIAM: AIDA ČAUŠEVIĆ (1968.-2021.)" TextColor ="Black" HorizontalOptions="Center" VerticalOptions="FillAndExpand" />
+
+                <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="ada" Clicked="ada_Clicked" Source="http://bhfilm.ba/slike/clanci/1624351461lettherebecolor.png"  HorizontalOptions="Start"/>
+                <Label  Text="Film Ade Hasanovića LET THERE BE COLOUR nagrađen na Lovers Film Festivalu u Torinu" TextColor ="Black" HorizontalOptions="Center" VerticalOptions="FillAndExpand" />
+
+                <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="anja" Clicked="anja_Clicked" Source="http://bhfilm.ba/slike/clanci/1623499945anja.jpg"  HorizontalOptions="Start"/>
+                <Label  Text="Anja Kraljević: Vremenom iste filmove gledamo sasvim novim očima" TextColor ="Black" HorizontalOptions="Center" VerticalOptions="FillAndExpand" />
+
+               
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

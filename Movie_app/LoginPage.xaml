@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Title="Prijava" Icon="ic_action_login.png"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="background.jfif"
+             x:Class="Movie_app.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Margin="25" VerticalOptions="Center">
+            <Label TextColor="Black" Text="Prijava" FontSize="Large" FontAttributes="Bold" Margin="0,0,0,10"/>
+            <Label TextColor="Black" Text="Username" FontSize="Default" FontAttributes="Bold" />
+            <Entry x:Name="entryUserName" Placeholder="Piši ovdje..."></Entry>
+            <Label TextColor="Black" Text="Password" FontSize="Default" FontAttributes="Bold" />
+            <Entry x:Name="entryPassword" Placeholder="Piši ovdje..." IsPassword="True"></Entry>
+
+            <Button x:Name="btnLogin" Text="Prijava" Clicked="btnLogin_Clicked" BackgroundColor="BurlyWood" CornerRadius="30"></Button>
+            <Button x:Name="btnRegister" Text="Registracija" Clicked="btnRegister_Clicked" CornerRadius="30" BackgroundColor="BurlyWood"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

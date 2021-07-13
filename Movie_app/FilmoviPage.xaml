@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Filmovi" Icon="ic_action_screen_search_desktop.png"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="background.jfif"
+             x:Class="Movie_app.FilmoviPage">
+   
+    <ContentPage.Content>
+        <ScrollView x:Name="MainScroll" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <Label HorizontalOptions="Center" Text="Kliknite na sliku za više detalja" TextColor ="DarkSalmon"/>
+                <Label/>
+                <Grid ColumnSpacing="10" RowSpacing="10" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="Major" Clicked="Major_Clicked" Source="http://bhfilm.ba/slike/filmovi/1519727707major_bauk.jpg" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label TextColor="Black" Grid.Row="0" Grid.Column="1" Text="Naziv: MAJOR BAUK Režija: N. Popović Scenarij: B. Ćopić Producentska kuća: Bosna film" />
+
+                    <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="TudaZemlja" Clicked="TudaZemlja_Clicked" Source="http://bhfilm.ba/slike/filmovi/1519727333tuda_zemlja.jpg" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label TextColor="Black" Grid.Row="1" Grid.Column="1" Text="Naziv: TUĐA ZEMLJA Režija: J. Gale Scenarij: M. Selimović Producentska kuća: Bosna film" />
+
+                    <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="Solaja" Clicked="Solaja_Clicked" Source="http://bhfilm.ba/slike/filmovi/1519727572solaja.jpg" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label TextColor="Black" Grid.Row="2" Grid.Column="1" Text="Naziv: ŠOLAJA Režija: V. Nanović Scenarij: M. Renovčević Producentska kuća: Studio film" />
+
+                    <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="Hanka" Clicked="Hanka_Clicked" Source="http://bhfilm.ba/slike/filmovi/1519727615hanka.jpg" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label TextColor="Black" Grid.Row="3" Grid.Column="1" Text="Naziv: HANKA Režija: S. Vorkapić Scenarij: S. Vorkapić Producentska kuća: Bosna film" />
+
+                    <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="Klisura" Clicked="Klisura_Clicked" Source="http://bhfilm.ba/slike/filmovi/1519727505klisura.jpg" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label TextColor="Black" Grid.Row="4" Grid.Column="1" Text="Naziv: Klisura Režija: B.Kosanović Scenarij:B.Kosanović Producentska kuća: Studio film, Titanius Film München" />
+
+                    <ImageButton BorderWidth="2" BorderColor="Black" CornerRadius="30" x:Name="PodSumnjom" Clicked="Pod_Sumnjom_Clicked" Source="http://bhfilm.ba/slike/filmovi/1519727541pod_sumnjom.jpg" Grid.Row="5" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label TextColor="Black" Grid.Row="5" Grid.Column="1" Text="Naziv: POD SUMNJOM        Režija: B. Belan Scenarij: B. Belan Producentska kuća: Bosna film" />
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
